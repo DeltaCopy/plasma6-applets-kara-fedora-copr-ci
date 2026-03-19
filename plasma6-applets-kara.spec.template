@@ -1,0 +1,70 @@
+%define app plasma6-applets-kara
+%define _app kara
+%define release_tag ${TAG} # this line gets updated automatically by Github Actions
+%define dev dhruv8sh
+%define _qt_major_version 6
+%define _build_id_links none
+
+Name: %{app}
+Version: %{release_tag}
+Release: 1%{?dist}
+Summary: KDE Plasma Pager Applet
+License: GPL-3.0-or-later
+Conflicts: %{_app}
+
+URL: https://github.com/%{dev}/%{_app}
+Source0: https://github.com/%{dev}/%{_app}/archive/refs/tags/v%{version}.tar.gz
+
+Obsoletes:      %{app} <= %{version}
+
+%description  
+KDE Plasma Pager Applet
+
+BuildRequires:  gcc-c++
+BuildRequires:  cmake >= 3.16
+BuildRequires:  extra-cmake-modules >= 5.240.0
+BuildRequires:  fdupes
+BuildRequires:  gettext
+
+# kf6 dependencies
+BuildRequires:  kf%{_qt_major_version}-rpm-macros
+BuildRequires:  kf%{_qt_major_version}-kitemmodels-devel
+
+# qt6 dependencies
+BuildRequires:  cmake(KF%{_qt_major_version}Kirigami2)
+BuildRequires:  cmake(KF%{_qt_major_version}I18n)
+
+BuildRequires:  cmake(Plasma)
+BuildRequires:  cmake(PlasmaActivities)
+BuildRequires:  cmake(KWayland)
+
+BuildRequires:  kwin-devel
+BuildRequires:  libepoxy-devel
+BuildRequires:  libdrm-devel
+BuildRequires:  plasma-workspace-devel
+
+%prep
+%autosetup -n %{_app}-%{version} -p1
+
+%build
+%cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
+%cmake_build
+
+%install
+%cmake_install
+
+%fdupes %{buildroot}/%{_prefix}
+
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
+
+%files
+%license LICENSE
+%doc README.md
+
+%{_libdir}/lib%{_app}.so
+%{_libdir}/qt%{_qt_major_version}
+%{_datadir}/plasma/plasmoids
+
+%changelog
+%autochangelog
