@@ -1,6 +1,8 @@
 # Build Kara and publish release
 name: Kara Fedora COPR build CI
-on: workflow_dispatch
+on:
+  schedule:
+    - cron: "0 00 * * *" # At 00:00 daily
 env:
   COPR_PROJECT: plasma6-applets-kara
   COPR_USERNAME: deltacopy
