@@ -15,11 +15,6 @@ Conflicts: %{_app}
 URL: https://github.com/%{dev}/%{_app}
 Source0: https://github.com/%{dev}/%{_app}/archive/refs/tags/v%{version}.tar.gz
 
-Obsoletes:      %{app} <= %{version}
-
-%description  
-KDE Plasma Pager Applet
-
 BuildRequires:  gcc-c++
 BuildRequires:  cmake >= 3.16
 BuildRequires:  extra-cmake-modules >= 5.240.0
@@ -42,6 +37,11 @@ BuildRequires:  kwin-devel
 BuildRequires:  libepoxy-devel
 BuildRequires:  libdrm-devel
 BuildRequires:  plasma-workspace-devel
+
+Obsoletes:      %{app} <= %{version}
+
+%description
+KDE Plasma Pager Applet
 
 %prep
 %autosetup -n %{_app}-%{version} -p1
