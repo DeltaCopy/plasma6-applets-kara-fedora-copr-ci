@@ -22,7 +22,7 @@
 
   #### GitHub Actions scheduled build status
 
-  [![Darkly Fedora COPR build CI](https://github.com/DeltaCopy/plasma6-applets-kara-fedora-copr-ci/actions/workflows/plasma6-applets-kara-fedora-copr-ci.yml/badge.svg)](https://github.com/DeltaCopy/plasma6-applets-kara-fedora-copr-ci/actions/workflows/plasma6-applets-kara-fedora-copr-ci.yml)
+  [![Plasma6 Applets Kara Fedora COPR build CI](https://github.com/DeltaCopy/plasma6-applets-kara-fedora-copr-ci/actions/workflows/plasma6-applets-kara-fedora-copr-ci.yml/badge.svg)](https://github.com/DeltaCopy/plasma6-applets-kara-fedora-copr-ci/actions/workflows/plasma6-applets-kara-fedora-copr-ci.yml)
 
   #### Fedora Copr last build status
 
