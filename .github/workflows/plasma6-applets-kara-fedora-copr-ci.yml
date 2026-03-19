@@ -45,7 +45,7 @@ jobs:
         run: |
           echo ${{ steps.step_version.outputs.VERSION }}
           cat << EOF > README.md
-            # $COPR_PROJECT
+            # $COPR_PROJECT-fedora-copr-ci
             RPM build spec for building Kara on the Fedora COPR.
 
             This auto triggers Fedora Copr builds: <https://copr.fedorainfracloud.org/coprs/deltacopy/$COPR_PROJECT/builds>
@@ -76,7 +76,7 @@ jobs:
             [![Copr build status](https://copr.fedorainfracloud.org/coprs/deltacopy/$COPR_PROJECT/package/$COPR_PROJECT/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/deltacopy/$COPR_PROJECT/package/$COPR_PROJECT/)
 
             ## Latest version
-            <img src="https://img.shields.io/badge/$COPR_PROJECT-${{ steps.step_version.outputs.VERSION }}-orange" alt="$COPR_PROJECT-${{ steps.step_version.outputs.VERSION }}">
+            <img src="https://img.shields.io/badge/plasma6--applets--kara-${{ steps.step_version.outputs.VERSION }}-orange" alt="plasma6--applets--kara-${{ steps.step_version.outputs.VERSION }}">
           EOF
           git config --global user.name $GIT_USER
           git config --global user.email ecto1@duck.com
