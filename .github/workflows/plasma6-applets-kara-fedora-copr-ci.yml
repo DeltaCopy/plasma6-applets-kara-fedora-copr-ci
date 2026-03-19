@@ -6,7 +6,7 @@ env:
   COPR_USERNAME: deltacopy
   COPR_URL: https://copr.fedorainfracloud.org
   BUILD_REPO: https://github.com/dhruv8sh/kara
-  SPEC_FILE: $GITHUB_WORKSPACE/.github/plasma6-applets-kara.spec.template
+  SPEC_FILE: $GITHUB_WORKSPACE/.github/plasma6-applets-kara.spec
   GIT_USER: DeltaCopy
   REPO_DEV: dhruv8sh
   REPO_NAME: kara
@@ -69,7 +69,7 @@ jobs:
 
             #### GitHub Actions scheduled build status
 
-            [![Darkly Fedora COPR build CI](https://github.com/DeltaCopy/$COPR_PROJECT-fedora-copr-ci/actions/workflows/$COPR_PROJECT-fedora-copr-ci.yml/badge.svg)](https://github.com/DeltaCopy/$COPR_PROJECT-fedora-copr-ci/actions/workflows/$COPR_PROJECT-fedora-copr-ci.yml)
+            [![Plasma6 Applets Kara Fedora COPR build CI](https://github.com/DeltaCopy/$COPR_PROJECT-fedora-copr-ci/actions/workflows/$COPR_PROJECT-fedora-copr-ci.yml/badge.svg)](https://github.com/DeltaCopy/$COPR_PROJECT-fedora-copr-ci/actions/workflows/$COPR_PROJECT-fedora-copr-ci.yml)
 
             #### Fedora Copr last build status
 
