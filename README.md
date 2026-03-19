@@ -17,7 +17,7 @@
 
   <pre>
   sudo dnf copr enable deltacopy/plasma6-applets-kara
-  sudo dnf in darkly
+  sudo dnf in plasma6-applets-kara
   </pre>
 
   #### GitHub Actions scheduled build status
