@@ -45,7 +45,7 @@ jobs:
         run: |
           echo ${{ steps.step_version.outputs.VERSION }}
           cat << EOF > README.md
-            # darkly-fedora-copr-ci
+            # $COPR_PROJECT
             RPM build spec for building Kara on the Fedora COPR.
 
             This auto triggers Fedora Copr builds: <https://copr.fedorainfracloud.org/coprs/deltacopy/$COPR_PROJECT/builds>
