@@ -1,5 +1,5 @@
 # Build Darkly and publish release
-name: Plasma6 Applets Kara Fedora COPR build CI
+name: Kara Fedora COPR build CI
 on: workflow_dispatch
 env:
   COPR_PROJECT: plasma6-applets-kara
