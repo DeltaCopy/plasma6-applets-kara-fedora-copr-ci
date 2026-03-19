@@ -1,4 +1,4 @@
-  # darkly-fedora-copr-ci
+  # plasma6-applets-kara
   RPM build spec for building Kara on the Fedora COPR.
 
   This auto triggers Fedora Copr builds: <https://copr.fedorainfracloud.org/coprs/deltacopy/plasma6-applets-kara/builds>
