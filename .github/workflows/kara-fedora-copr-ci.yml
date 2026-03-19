@@ -1,4 +1,4 @@
-# Build Darkly and publish release
+# Build Kara and publish release
 name: Kara Fedora COPR build CI
 on: workflow_dispatch
 env:
@@ -64,7 +64,7 @@ jobs:
 
             <pre>
             sudo dnf copr enable deltacopy/$COPR_PROJECT
-            sudo dnf in darkly
+            sudo dnf in $COPR_PROJECT
             </pre>
 
             #### GitHub Actions scheduled build status
@@ -81,7 +81,7 @@ jobs:
           git config --global user.name $GIT_USER
           git config --global user.email ecto1@duck.com
           git add README.md
-          git commit --allow-empty -m "[Darkly Fedora COPR CI]: Update version"
+          git commit --allow-empty -m "[Kara Fedora COPR CI]: Update version"
           git push --force -v
   UpdateFedoraCOPR:
     needs: GetLatestVersion
