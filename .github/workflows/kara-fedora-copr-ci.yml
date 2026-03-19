@@ -69,7 +69,7 @@ jobs:
 
             #### GitHub Actions scheduled build status
 
-            [![Plasma6 Applets Kara Fedora COPR build CI](https://github.com/DeltaCopy/$COPR_PROJECT-fedora-copr-ci/actions/workflows/$COPR_PROJECT-fedora-copr-ci.yml/badge.svg)](https://github.com/DeltaCopy/$COPR_PROJECT-fedora-copr-ci/actions/workflows/$COPR_PROJECT-fedora-copr-ci.yml)
+            [![Kara Fedora COPR build CI](https://github.com/DeltaCopy/$COPR_PROJECT-fedora-copr-ci/actions/workflows/kara-fedora-copr-ci.yml/badge.svg)](https://github.com/DeltaCopy/$COPR_PROJECT-fedora-copr-ci/actions/workflows/kara-fedora-copr-ci.yml)
 
             #### Fedora Copr last build status
 
@@ -121,7 +121,7 @@ jobs:
         run: cat ${{ env.SPEC_FILE }}
       - name: Get latest COPR build information
         run: |
-          #LATEST_COPR=$(copr-cli get-package ${{ env.COPR_USERNAME }}/${{ env.COPR_PROJECT }} --name ${{ env.COPR_PROJECT }} | python -c 'import json,sys;obj=json.load(sys.stdin);print(obj["latest_build"]["source_package"]["version"]);')
+          LATEST_COPR=$(copr-cli get-package ${{ env.COPR_USERNAME }}/${{ env.COPR_PROJECT }} --name ${{ env.COPR_PROJECT }} | python -c 'import json,sys;obj=json.load(sys.stdin);print(obj["latest_build"]["source_package"]["version"]);')
 
           echo "Latest COPR version = ${LATEST_COPR%-*}"
           echo "Latest Git tag release = ${{ env.LATEST_TAG }}"
