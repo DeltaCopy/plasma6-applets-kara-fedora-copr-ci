@@ -24,5 +24,5 @@
 
  ## Latest version
   <a href="https://github.com/dhruv8sh/kara/releases">
-    <img src="https://img.shields.io/badge/plasma6--applets--kara-v1.0.0-orange" alt="plasma6--applets--kara-v1.0.0">
+    <img src="https://img.shields.io/badge/plasma6--applets--kara-null-orange" alt="plasma6--applets--kara-null">
   </a>
