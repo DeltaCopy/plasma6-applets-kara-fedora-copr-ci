@@ -1,5 +1,5 @@
 # Build Kara and publish release
-name: Kara Fedora COPR build CI
+name: Kara Fedora COPR build CI manual
 on: workflow_dispatch
 env:
   COPR_PROJECT: plasma6-applets-kara
