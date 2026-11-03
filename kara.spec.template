@@ -46,6 +46,9 @@ KDE Plasma Pager Applet
 %prep
 %autosetup -n %{_app}-%{version} -p1
 
+sed -i "s/.*VERSION.*/    VERSION %{version}/" %{_builddir}/%{_app}-%{version}/plugin/CMakeLists.txt 
+sed -i "s/\"Version\".*/\"Version\": \"%{version}\",/" %{_builddir}/%{_app}-%{version}/package/metadata.json
+
 %build
 %cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
 %cmake_build
